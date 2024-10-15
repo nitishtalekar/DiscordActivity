@@ -29,14 +29,14 @@
         const GODOT_CONFIG = {
             args: [],
             canvasResizePolicy: 2,
-            executable: config.PRODUCT_NAME,
+            executable: `${config.FOLDER}/${config.PRODUCT_NAME}`,
             experimentalVK: false,
             focusCanvas: true,
             gdextensionLibs: []
         };
 
         const script = document.createElement("script");
-        script.src = config.PRODUCT_NAME + ".js";
+        script.src = `${config.FOLDER}/${config.PRODUCT_NAME}` + ".js";
         script.async = true;
         script.onload = () => {
             godotInstance = new Engine(GODOT_CONFIG);
